@@ -3,4 +3,9 @@
 - [x] Create classes
 - [x] Create methods
 - [x] Write test code
-- [ ] Draw diagram by tool and attach as image in Readme
+- [x] Draw diagram by tool and attach as image in Readme
+- [ ] Implement Game class
+
+## Class Diagram
+
+![img_1.png](img_1.png)
