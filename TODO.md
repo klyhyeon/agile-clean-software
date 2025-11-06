@@ -1,4 +1,4 @@
-## Bowling Game
+## Bowling Game TODO List
 
 - [x] Create classes
 - [x] Create methods
@@ -7,7 +7,3 @@
 - [ ] Implement Game class
 - [ ] How will Frame class work?
 - [ ] Implement Frame class
-
-## Class Diagram
-
-![img.png](img.png)
