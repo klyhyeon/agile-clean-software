@@ -1,10 +1,9 @@
 package co.yh.agilesoftware.bowling
 
-class Frame(
-    private val users: Int,
-) {
+class Frame {
 
-    fun start(): Int {
-        return users
+    fun getScore(): Int {
+        // TODO implement
+        return 1
     }
 }

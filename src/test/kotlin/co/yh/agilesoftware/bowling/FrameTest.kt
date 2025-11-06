@@ -6,11 +6,11 @@ import io.kotest.matchers.shouldBe
 class FrameTest : BehaviorSpec ({
 
     Given("Create Frame object") {
-        val frame = Frame(users = 2)
+        val frame = Frame()
         When("Start the Frame") {
-            val users = frame.start()
+            val score = frame.getScore()
             Then("Return users count") {
-                users shouldBe(2)
+                score shouldBe(1)
             }
         }
     }
