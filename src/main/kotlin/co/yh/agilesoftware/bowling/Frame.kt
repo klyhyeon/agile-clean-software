@@ -1,9 +1,12 @@
 package co.yh.agilesoftware.bowling
 
-class Frame {
+import co.yh.agilesoftware.exception.UserNotFoundException
 
-    fun getScore(): Int {
-        // TODO implement
-        return 1
+class Frame(
+    val userScores: List<UserScore> = emptyList(),
+) {
+
+    fun getUserScore(userName: String): UserScore {
+        return userScores.firstOrNull { it.user.name == userName } ?: throw UserNotFoundException(userName)
     }
 }

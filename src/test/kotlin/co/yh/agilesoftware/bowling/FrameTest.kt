@@ -1,16 +1,20 @@
 package co.yh.agilesoftware.bowling
 
+import co.yh.agilesoftware.exception.UserNotFoundException
+import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.BehaviorSpec
-import io.kotest.matchers.shouldBe
+import io.kotest.matchers.string.shouldInclude
 
 class FrameTest : BehaviorSpec ({
 
-    Given("Create Frame object") {
+    Given("Create Frame") {
         val frame = Frame()
-        When("Start the Frame") {
-            val score = frame.getScore()
-            Then("Return users count") {
-                score shouldBe(1)
+        When("Get user not existing") {
+            val exception = shouldThrow<UserNotFoundException> {
+                frame.getUserScore("yuhyeon")
+            }
+            Then("Throw exception with given name") {
+                exception.message shouldInclude "yuhyeon"
             }
         }
     }

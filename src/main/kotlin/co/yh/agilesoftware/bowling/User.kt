@@ -1,4 +1,6 @@
 package co.yh.agilesoftware.bowling
 
-class User {
+class User(
+    val name: String,
+) {
 }
