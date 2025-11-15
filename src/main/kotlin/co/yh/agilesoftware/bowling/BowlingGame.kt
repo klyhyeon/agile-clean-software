@@ -9,13 +9,13 @@ class BowlingGame(
         private set
 
     override fun startGame() {
-        createFrames()
+        createFrames() 
     }
 
     fun createFrames(): List<Frame> {
         val tempFrames = mutableListOf<Frame>()
         for (i in 1..rounds) {
-            tempFrames.add(Frame())
+            tempFrames.add(Frame(i))
         }
         frames = tempFrames
         return frames
