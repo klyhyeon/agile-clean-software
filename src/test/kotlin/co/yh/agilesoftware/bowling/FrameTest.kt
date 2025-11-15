@@ -12,7 +12,7 @@ class FrameTest : BehaviorSpec ({
         val frame = Frame(1)
         When("Get user not existing") {
             val exception = shouldThrow<UserNotFoundException> {
-                frame.getUserScore("yuhyeon")
+                frame.getUserPoint("yuhyeon")
             }
             Then("Throw exception with given name") {
                 exception.message shouldInclude "yuhyeon"
