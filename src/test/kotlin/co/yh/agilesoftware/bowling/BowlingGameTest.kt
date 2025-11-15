@@ -18,4 +18,17 @@ class BowlingGameTest : BehaviorSpec({
             }
         }
     }
+
+    Given("Bowling game with multiple users") {
+        val bowlingGame = BowlingGame(users = listOf(User("yuhyeon"), User("jiwoo")))
+        When("Create frame with bowling game") {
+            val frames = bowlingGame.createFrames()
+            Then("Return count of frames same size with default rounds") {
+                frames shouldHaveSize 20
+            }
+            Then("Return users of game") {
+                bowlingGame.users[1].name shouldBe "jiwoo"
+            }
+        }
+    }
 })
